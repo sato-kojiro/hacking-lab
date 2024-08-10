@@ -1,0 +1,60 @@
+version: '3'
+services:
+  dvwa:
+    image: vulnerables/web-dvwa
+    ports:
+      - "8082:80"
+    networks:
+      - hacking-lab
+
+  juice-shop:
+    image: bkimminich/juice-shop
+    ports:
+      - "3001:3000"
+    networks:
+      - hacking-lab
+
+  metasploitable2:
+    build: ./metasploitable2
+    container_name: metasploitable2
+    ports:
+      - "2222:22"
+      - "8083:80"
+    networks:
+      - hacking-lab
+    tty: true
+    stdin_open: true
+
+  bwapp:
+    image: raesene/bwapp
+    ports:
+      - "8084:80"
+    networks:
+      - hacking-lab
+
+  kali-linux:
+    build: ./kali-linux
+    container_name: kali-linux
+    ports:
+      - "3389:3389"
+    networks:
+      - hacking-lab
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./kali-linux/xrdp:/var/run/xrdp
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: msf
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: msf
+    ports:
+      - "5432:5432"
+    networks:
+      - hacking-lab
+
+networks:
+  hacking-lab:
+    driver: bridge
