@@ -98,19 +98,19 @@ https://portswigger.net/burp/releases
 Widowsキー＋Rを実行して"mstsc"と入力し、Enterをクリックする。  
 リモートデスクトップ接続の"接続"ボタンをクリックする。  
 usernameに"root"を入力し、passwordにrootユーザのパスワードを設定し、"OK"ボタンをクリックする。  
-[rdp_login](doc/image/readme/rdp_login.jpg)  
+![rdp_login](doc/image/readme/rdp_login.jpg)  
 
 4. BurpSuiteのインストール  
 KaliLinuxのデスクトップ下部のコンソールアイコンをクリックする。  
 */bin/sh /root/urpsuite_community_linux_v2024_6_5.sh*  
 "Next >"ボタンをクリックする。  
-[burpsuite_install_1](doc/image/readme/burpsuite_install_1.jpg)  
+![burpsuite_install_1](doc/image/readme/burpsuite_install_1.jpg)  
 "Next >"ボタンをクリックする。  
-[burpsuite_install_2](doc/image/readme/burpsuite_install_2.jpg)  
+![burpsuite_install_2](doc/image/readme/burpsuite_install_2.jpg)  
 "Next >"ボタンをクリックする。  
-[burpsuite_install_3](doc/image/readme/burpsuite_install_3.jpg)  
+![burpsuite_install_3](doc/image/readme/burpsuite_install_3.jpg)  
 "Finish"ボタンをクリックする。  
-[burpsuite_install_4](doc/image/readme/burpsuite_install_4.jpg)  
+![burpsuite_install_4](doc/image/readme/burpsuite_install_4.jpg)  
 *exit*
 
 これでハッキング・ラボの構築は完了です。
